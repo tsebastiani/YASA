@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import Yasa
+import Yasa
 
 class YasaTests: XCTestCase {
     
@@ -26,7 +26,7 @@ class YasaTests: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         let yasa = Yasa()
         yasa.login(username: "tullio", password: "Sebastiani") { 
-            print("test")
+            
         }
     }
     

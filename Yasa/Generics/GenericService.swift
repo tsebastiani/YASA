@@ -24,7 +24,7 @@ class Service<S: ServiceConfiguring,C: Clienting>{
     }
     
     
-    func query(params: GenericParams, callback: (_ mappedEntity: GenericMappedEntity?,_ error: Error?) -> ()) {
+    func query(params: GenericParams, callback: @escaping (_ mappedEntity: GenericMappedEntity?,_ error: Error?) -> ()) {
         guard let client = client, let service = service, let mapper = mapper else {
             return
         }

@@ -10,5 +10,5 @@ import UIKit
 
 protocol Clienting {
     func setup(config: ServiceSettings)
-    func query(callback: (_ data: Data?, _ error: Error?) -> ())
+    func query(callback: @escaping (_ data: Data?, _ error: Error?) -> ())
 }

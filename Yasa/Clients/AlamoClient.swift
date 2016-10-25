@@ -6,7 +6,7 @@
 //  Copyright © 2016 Tullio Sebastiani. All rights reserved.
 //
 
-import UIKit
+/*import UIKit
 
 class AlamoClient: Clienting {
     var config: ServiceSettings?
@@ -19,3 +19,4 @@ class AlamoClient: Clienting {
         callback(nil,nil)
     }
 }
+*/
