@@ -6,17 +6,17 @@
 //  Copyright © 2016 Tullio Sebastiani. All rights reserved.
 //
 import Foundation
-class Service<T: Servicing>{
+class Service<T: ServiceConfiguring>{
     
     typealias GenericParams = T.GenericParams
     typealias GenericMapper = T.GenericMapper
     typealias GenericMappedEntity = GenericMapper.GenericMappedEntity
     
-    var client: HTTPClient? = nil
+    var client: FoundationCLient? = nil
     var service: T? = nil
     var mapper: GenericMapper? = nil
     
-    init(client: HTTPClient, service: T, mapper: GenericMapper){
+    init(client: FoundationCLient, service: T, mapper: GenericMapper){
         self.client = client
         self.service = service
         self.mapper = mapper

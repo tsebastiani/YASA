@@ -33,7 +33,7 @@ struct LoginServiceParams  {
     var password: String?
 }
 
-class LoginService: Servicing {
+class LoginService: ServiceConfiguring {
     
     /*
      Questa è la specializzazione degli associatedTypes in questo modo il compilatore segue tutta la catena passando per 

@@ -7,7 +7,7 @@
 //
 import Foundation
 
-class HTTPClient {
+class FoundationCLient {
     var config: ConcreteHTTPClientSettings?
     
     func setup(config: ConcreteHTTPClientSettings){

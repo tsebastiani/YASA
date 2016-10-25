@@ -5,7 +5,7 @@
 //  Created by Tullio Sebastiani on 22/10/16.
 //  Copyright © 2016 Tullio Sebastiani. All rights reserved.
 //
-import Foundation
+/*import Foundation
 
 class MenuItem {
     var title: String?
@@ -26,7 +26,7 @@ struct MenuServiceParams {
     var menuItem: String?
 }
 
-class MenuService: Servicing {
+class MenuService: ServiceConfiguring {
     /*
      Questa è la specializzazione degli associatedTypes in questo modo il compilatore segue tutta la catena passando per
      le interfacce e sa cosa ritornare esattamente
@@ -48,4 +48,4 @@ class MenuService: Servicing {
         return ConcreteHTTPClientSettings()
     }
 
-}
+}*/

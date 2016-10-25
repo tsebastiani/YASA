@@ -11,7 +11,7 @@
  nell'implementazione tramite un typealias in questo modo rimane tutto generico!!!
  */
 
-protocol Servicing {
+protocol ServiceConfiguring {
     associatedtype GenericParams
     associatedtype GenericMapper: EntityMapping
     func getClientSettings(_: GenericParams) -> ConcreteHTTPClientSettings
