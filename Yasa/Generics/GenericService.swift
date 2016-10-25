@@ -35,7 +35,7 @@ class Service<S: ServiceConfiguring,C: Clienting>{
                 callback(nil,error)
                 return
             }
-            guard let mappedEntity: GenericMappedEntity = mapper.map(data: data) else {
+            guard let mappedEntity: GenericMappedEntity = mapper.dataToEntity(data: data) else {
                 callback(nil, MappingError())
                 return
             }

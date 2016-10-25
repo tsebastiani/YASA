@@ -16,8 +16,8 @@
 		437C63481DBF4ADA001178CE /* ServiceConfiguring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437C63461DBF4ADA001178CE /* ServiceConfiguring.swift */; };
 		437C634B1DBF4AE4001178CE /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437C63491DBF4AE4001178CE /* LoginService.swift */; };
 		437C634C1DBF4AE4001178CE /* MenuService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437C634A1DBF4AE4001178CE /* MenuService.swift */; };
-		437C634E1DBF4B03001178CE /* Yasa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437C634D1DBF4B03001178CE /* Yasa.swift */; };
 		437C63501DBF4B20001178CE /* Stubs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437C634F1DBF4B20001178CE /* Stubs.swift */; };
+		438839821DBFA960007A8EBB /* Yasa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437C634D1DBF4B03001178CE /* Yasa.swift */; };
 		43A1CF501DBF84C100D89110 /* Clienting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A1CF4F1DBF84C100D89110 /* Clienting.swift */; };
 		43A1CF521DBF874300D89110 /* AlamoClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A1CF511DBF874300D89110 /* AlamoClient.swift */; };
 /* End PBXBuildFile section */
@@ -268,12 +268,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				437C63481DBF4ADA001178CE /* ServiceConfiguring.swift in Sources */,
+				438839821DBFA960007A8EBB /* Yasa.swift in Sources */,
 				437C63471DBF4ADA001178CE /* EntityMapping.swift in Sources */,
 				43A1CF501DBF84C100D89110 /* Clienting.swift in Sources */,
 				437C634C1DBF4AE4001178CE /* MenuService.swift in Sources */,
 				437C634B1DBF4AE4001178CE /* LoginService.swift in Sources */,
 				437C63421DBF4ABC001178CE /* FoundationClient.swift in Sources */,
-				437C634E1DBF4B03001178CE /* Yasa.swift in Sources */,
 				43A1CF521DBF874300D89110 /* AlamoClient.swift in Sources */,
 				437C63441DBF4ACC001178CE /* GenericService.swift in Sources */,
 				437C63501DBF4B20001178CE /* Stubs.swift in Sources */,
