@@ -42,7 +42,7 @@ class MenuService: ServiceConfiguring {
          è solo un segnaposto
          */
         _ = "http://......"
-        
+        https://tsebastiani.github.io/items.xml
         
         print("configuro il client con menuitem: \(params.menuItem)")
         return ConcreteHTTPClientSettings()
