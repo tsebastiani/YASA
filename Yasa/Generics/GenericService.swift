@@ -6,25 +6,22 @@
 //  Copyright © 2016 Tullio Sebastiani. All rights reserved.
 //
 import Foundation
-class Service<T: ServiceConfiguring>{
+class Service<S: ServiceConfiguring,C: Clienting>{
     
-    typealias GenericParams = T.GenericParams
-    typealias GenericMapper = T.GenericMapper
+    typealias GenericParams = S.GenericParams
+    typealias GenericMapper = S.GenericMapper
     typealias GenericMappedEntity = GenericMapper.GenericMappedEntity
-    
-    var client: FoundationCLient? = nil
-    var service: T? = nil
+
     var mapper: GenericMapper? = nil
+    var service: S? = nil
+    var client: C? = nil
     
-    init(client: FoundationCLient, service: T, mapper: GenericMapper){
+    init(client: C, service: S, mapper: GenericMapper){
+  
         self.client = client
         self.service = service
         self.mapper = mapper
     }
-    
-    /*
-     Questa è l'implementazione del flusso di un service generico, query -> map -> callback
-     */
     
     
     func query(params: GenericParams, callback: (_ mappedEntity: GenericMappedEntity?,_ error: Error?) -> ()) {
@@ -43,7 +40,6 @@ class Service<T: ServiceConfiguring>{
                 return
             }
             callback(mappedEntity,nil)
-            
             
         }
         

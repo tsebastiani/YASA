@@ -14,6 +14,18 @@
 protocol ServiceConfiguring {
     associatedtype GenericParams
     associatedtype GenericMapper: EntityMapping
-    func getClientSettings(_: GenericParams) -> ConcreteHTTPClientSettings
+    func getClientSettings(_: GenericParams) -> ServiceSettings
 }
 
+enum HTTPMethod {
+    case get
+    case post
+    case put
+    case delete
+}
+
+struct ServiceSettings {
+    var method: HTTPMethod?
+    var url: URL?
+    var body: String?
+}

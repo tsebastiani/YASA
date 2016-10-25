@@ -15,5 +15,6 @@ import Foundation
 
 protocol EntityMapping {
     associatedtype GenericMappedEntity
-    func map(data: Data) -> GenericMappedEntity?
+    func dataToEntity(data: Data) -> GenericMappedEntity?
+    func entityToData(entity: GenericMappedEntity?) -> Data?
 }

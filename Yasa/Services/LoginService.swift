@@ -14,18 +14,11 @@
 import Foundation
 
 
-class User {
+struct User {
     var name: String?
     var surname: String?
     var email: String?
     var address: String?
-}
-
-class LoginEntityMapper: EntityMapping {
-    typealias GenericMappedEntity = User
-    func map(data: Data) -> GenericMappedEntity? {
-        return User()
-    }
 }
 
 struct LoginServiceParams  {
@@ -33,31 +26,45 @@ struct LoginServiceParams  {
     var password: String?
 }
 
+
+
+class LoginEntityMapper: EntityMapping {
+    typealias GenericMappedEntity = User
+    func dataToEntity(data: Data) -> GenericMappedEntity? {
+        do {
+            guard let object = try JSONSerialization.jsonObject(with: data, options:.allowFragments) as? Dictionary <String,Dictionary<String,String>> else {
+                return nil
+            }
+            var user = User()
+            
+            user.name = object["user"]?["name"]
+            user.surname = object["user"]?["surname"]
+            user.address = object["user"]?["address"]
+            user.email = object["user"]?["email"]
+    
+            return user
+        } catch {
+            return nil
+        }
+        
+
+    }
+    func entityToData(entity: User?) -> Data? {
+        return nil
+    }
+}
+
+
 class LoginService: ServiceConfiguring {
-    
-    /*
-     Questa è la specializzazione degli associatedTypes in questo modo il compilatore segue tutta la catena passando per 
-     le interfacce e sa cosa ritornare esattamente, questa torna la classe di configurazione per il client http, questa è una 
-     classe concreta , sara tipo NSURLconfiguration o qualcosa del genere ma come vedi i parametri che tu gli passi dalla
-     chiamata a query all'inizio, arrivano fino quaggiu, quindi ad esempio se devi fare il login, passi a query i parametri di login
-     e poi qui li metti fisicamente nell'header della request
-     */
-    
-    
     
     typealias GenericParams = LoginServiceParams
     typealias GenericMapper = LoginEntityMapper
     
-    func getClientSettings(_ params: LoginServiceParams) -> ConcreteHTTPClientSettings {
-        
-        /*
-         quji dentro sara contenuto anche l'url del servizio per il momento non facendo alcuna chiamata
-         è solo un segnaposto
-         */
-        _ = "http://......" 
-        
-        print("configuro il client con username: \(params.username) password: \(params.password)")
-        return ConcreteHTTPClientSettings()
+    func getClientSettings(_ params: LoginServiceParams) -> ServiceSettings {
+        var serviceSettings = ServiceSettings()
+        serviceSettings.url = URL(string: "https://tsebastiani.github.io/user.json")
+        serviceSettings.method = .get
+        return serviceSettings
     }
 
 }

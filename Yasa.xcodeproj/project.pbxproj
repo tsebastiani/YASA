@@ -18,6 +18,8 @@
 		437C634C1DBF4AE4001178CE /* MenuService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437C634A1DBF4AE4001178CE /* MenuService.swift */; };
 		437C634E1DBF4B03001178CE /* Yasa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437C634D1DBF4B03001178CE /* Yasa.swift */; };
 		437C63501DBF4B20001178CE /* Stubs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437C634F1DBF4B20001178CE /* Stubs.swift */; };
+		43A1CF501DBF84C100D89110 /* Clienting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A1CF4F1DBF84C100D89110 /* Clienting.swift */; };
+		43A1CF521DBF874300D89110 /* AlamoClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A1CF511DBF874300D89110 /* AlamoClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,8 @@
 		437C634A1DBF4AE4001178CE /* MenuService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuService.swift; sourceTree = "<group>"; };
 		437C634D1DBF4B03001178CE /* Yasa.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Yasa.swift; sourceTree = "<group>"; };
 		437C634F1DBF4B20001178CE /* Stubs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stubs.swift; sourceTree = "<group>"; };
+		43A1CF4F1DBF84C100D89110 /* Clienting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Clienting.swift; sourceTree = "<group>"; };
+		43A1CF511DBF874300D89110 /* AlamoClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamoClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				437C63411DBF4ABC001178CE /* FoundationClient.swift */,
+				43A1CF511DBF874300D89110 /* AlamoClient.swift */,
 			);
 			path = Clients;
 			sourceTree = "<group>";
@@ -137,6 +142,7 @@
 			children = (
 				437C63451DBF4ADA001178CE /* EntityMapping.swift */,
 				437C63461DBF4ADA001178CE /* ServiceConfiguring.swift */,
+				43A1CF4F1DBF84C100D89110 /* Clienting.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -263,10 +269,12 @@
 			files = (
 				437C63481DBF4ADA001178CE /* ServiceConfiguring.swift in Sources */,
 				437C63471DBF4ADA001178CE /* EntityMapping.swift in Sources */,
+				43A1CF501DBF84C100D89110 /* Clienting.swift in Sources */,
 				437C634C1DBF4AE4001178CE /* MenuService.swift in Sources */,
 				437C634B1DBF4AE4001178CE /* LoginService.swift in Sources */,
 				437C63421DBF4ABC001178CE /* FoundationClient.swift in Sources */,
 				437C634E1DBF4B03001178CE /* Yasa.swift in Sources */,
+				43A1CF521DBF874300D89110 /* AlamoClient.swift in Sources */,
 				437C63441DBF4ACC001178CE /* GenericService.swift in Sources */,
 				437C63501DBF4B20001178CE /* Stubs.swift in Sources */,
 			);

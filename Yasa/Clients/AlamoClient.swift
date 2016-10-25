@@ -1,13 +1,14 @@
 //
-//  HTTPClient.swift
-//  YASA - Yet Another Service Architecture
+//  AlamoClient.swift
+//  Yasa
 //
-//  Created by Tullio Sebastiani on 22/10/16.
+//  Created by Tullio Sebastiani on 25/10/2016.
 //  Copyright © 2016 Tullio Sebastiani. All rights reserved.
 //
-import Foundation
 
-class FoundationCLient: Clienting {
+import UIKit
+
+class AlamoClient: Clienting {
     var config: ServiceSettings?
     
     func setup(config: ServiceSettings){

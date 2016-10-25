@@ -11,7 +11,7 @@ import UIKit
 public class Yasa: NSObject {
     
     public func login(username: String, password: String,callback:()->()){
-        let loginserv: Service<LoginService> = Service(client:HTTPClient(),
+        let loginserv: Service<LoginService,FoundationCLient> = Service(client:FoundationCLient(),
                                                        service: LoginService(),
                                                        mapper: LoginEntityMapper())
         var loginParams: LoginServiceParams = LoginServiceParams()
