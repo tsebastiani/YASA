@@ -19,7 +19,7 @@ public class Yasa: NSObject {
         loginParams.password = "secret"
         
         loginserv.query(params: loginParams) { (entity:LoginEntityMapper.GenericMappedEntity?, error:Error?) in
-            guard let entity = entity, error != nil else {
+            guard let entity = entity, error == nil else {
                 return
             }
             print(entity.name)

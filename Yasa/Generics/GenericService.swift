@@ -31,7 +31,7 @@ class Service<S: ServiceConfiguring,C: Clienting>{
         client.setup(config: service.getClientSettings(params))
         client.query { (data: Data?, error: Error?) in
             
-            guard let data = data, error != nil else {
+            guard let data = data, error == nil else {
                 callback(nil,error)
                 return
             }
