@@ -10,7 +10,7 @@ import UIKit
 
 public class Yasa: NSObject {
     
-    public func login(username: String, password: String,callback:()->()){
+    public func login(username: String, password: String,callback: @escaping (_ user:User?,_ error:Error?)->()){
         let loginserv: Service<LoginService,FoundationCLient> = Service(client:FoundationCLient(),
                                                        service: LoginService(),
                                                        mapper: LoginEntityMapper())
@@ -20,12 +20,10 @@ public class Yasa: NSObject {
         
         loginserv.query(params: loginParams) { (entity:LoginEntityMapper.GenericMappedEntity?, error:Error?) in
             guard let entity = entity, error == nil else {
+                callback(nil,error)
                 return
             }
-            print(entity.name)
-            print(entity.surname)
-            print(entity.email)
-            print(entity.address)
+            callback(entity,nil)
         }
         
     }

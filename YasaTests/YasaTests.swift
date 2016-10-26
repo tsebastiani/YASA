@@ -25,7 +25,9 @@ class YasaTests: XCTestCase {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         let yasa = Yasa()
-        yasa.login(username: "tullio", password: "Sebastiani") { 
+        yasa.login(username: "tullio", password: "Sebastiani") { entity, error in
+            
+            print(entity)
             
         }
     }

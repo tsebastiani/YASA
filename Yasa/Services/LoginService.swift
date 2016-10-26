@@ -14,7 +14,7 @@
 import Foundation
 
 
-struct User {
+public struct User {
     var name: String?
     var surname: String?
     var email: String?
