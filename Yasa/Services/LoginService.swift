@@ -15,10 +15,10 @@ import Foundation
 
 
 public struct User {
-    var name: String?
-    var surname: String?
-    var email: String?
-    var address: String?
+    public var name: String?
+    public var surname: String?
+    public var email: String?
+    public var address: String?
 }
 
 struct LoginServiceParams  {

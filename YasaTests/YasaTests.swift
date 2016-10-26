@@ -26,8 +26,11 @@ class YasaTests: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         let yasa = Yasa()
         yasa.login(username: "tullio", password: "Sebastiani") { entity, error in
-            
-            print(entity)
+            guard let entity = entity else {
+                XCTFail()
+                return
+            }
+            XCTAssert(entity.name == "John")
             
         }
     }
