@@ -33,6 +33,12 @@ class YasaTests: XCTestCase {
             XCTAssert(entity.name == "John")
             
         }
+        
+        
+        
+        yasa.getItems(store: "dummyStore") { (items: [Item]?, error: Error?) in
+            print(items)
+        }
     }
     
     func testPerformanceExample() {
