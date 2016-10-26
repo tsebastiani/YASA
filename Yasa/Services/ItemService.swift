@@ -7,7 +7,7 @@
 //
 import Foundation
 
-public class Item {
+public struct Item {
     public var ID: String?
     public var Description: String?
     public var Price: String?
@@ -19,26 +19,64 @@ class ItemEntityMapper: NSObject, EntityMapping, XMLParserDelegate {
     typealias GenericMappedEntity = [Item]
     var items = [Item]()
     var parser: XMLParser?
+    var element: Item?
+    var currentElement: String?
+    var foundContent:String?
     
     
     func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String]) {
         
+        
         if elementName == "Element" {
-            let item = Item()
-            item.ID = attributeDict["ID"]
-            item.Description = attributeDict["Description"]
-            item.Location = attributeDict["Location"]
-            item.Price = attributeDict["Price"]
-            items.append(item)
+            if let element = element  {
+                items.append(element)
+            }
+            element = Item()
         }
+        
+
+        
+    }
+    
+    func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
+        
+        if elementName == "ID" {
+            if let string = foundContent {
+                element?.ID = string
+            }
+            
+        }
+        
+        if elementName == "Description" {
+            if let string = foundContent {
+                element?.Description = string
+            }
+            
+        }
+        if elementName == "Price" {
+            if let string = foundContent {
+                element?.Price = string
+            }
+            
+        }
+        if elementName == "Location" {
+            if let string = foundContent {
+                element?.Location = string
+            }
+            
+        }
+        
+        print(foundContent)
     }
     
     func parser(_ parser: XMLParser, foundCharacters string: String) {
         
+        foundContent = string
     }
     
     func dataToEntity(data: Data) -> GenericMappedEntity? {
         parser = XMLParser(data: data)
+        parser?.delegate = self
         parser?.parse()
         return items
     }
