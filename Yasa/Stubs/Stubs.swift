@@ -6,4 +6,4 @@
 //  Copyright © 2016 Tullio Sebastiani. All rights reserved.
 //
 
-class ConcreteHTTPClientSettings{}
+class ConcreteHTTPClientSettings {}

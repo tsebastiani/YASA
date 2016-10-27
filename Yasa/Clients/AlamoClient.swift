@@ -10,11 +10,11 @@
 
 class AlamoClient: Clienting {
     var config: ServiceSettings?
-    
+
     func setup(config: ServiceSettings){
         self.config = config
     }
-    
+
     func query(callback: (_ data: Data?, _ error: Error?) -> ()) {
         callback(nil,nil)
     }

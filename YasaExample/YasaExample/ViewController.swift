@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let yasa = Yasa()
-        yasa.login(username: "tullio", password: "sebastiani") { 
+        yasa.login(username: "tullio", password: "sebastiani") {
             print("Login")
         }
         // Do any additional setup after loading the view, typically from a nib.
@@ -25,6 +25,4 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
 }
-
