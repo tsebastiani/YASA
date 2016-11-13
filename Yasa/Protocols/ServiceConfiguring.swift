@@ -20,8 +20,8 @@ protocol ServiceConfiguring {
 enum HTTPMethod {
     case get
     case post
-    case put
-    case delete
+   /* case put
+    case delete*/
 }
 
 struct ServiceSettings {

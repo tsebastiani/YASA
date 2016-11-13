@@ -6,16 +6,17 @@
 //  Copyright © 2016 Tullio Sebastiani. All rights reserved.
 //
 
-import UIKit
+/*import UIKit
 
 class AlamoClient: Clienting {
     var config: ServiceSettings?
-    
+
     func setup(config: ServiceSettings){
         self.config = config
     }
-    
+
     func query(callback: (_ data: Data?, _ error: Error?) -> ()) {
         callback(nil,nil)
     }
 }
+*/

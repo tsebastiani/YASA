@@ -15,7 +15,7 @@
 		437C63471DBF4ADA001178CE /* EntityMapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437C63451DBF4ADA001178CE /* EntityMapping.swift */; };
 		437C63481DBF4ADA001178CE /* ServiceConfiguring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437C63461DBF4ADA001178CE /* ServiceConfiguring.swift */; };
 		437C634B1DBF4AE4001178CE /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437C63491DBF4AE4001178CE /* LoginService.swift */; };
-		437C634C1DBF4AE4001178CE /* MenuService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437C634A1DBF4AE4001178CE /* MenuService.swift */; };
+		437C634C1DBF4AE4001178CE /* ItemService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437C634A1DBF4AE4001178CE /* ItemService.swift */; };
 		437C63501DBF4B20001178CE /* Stubs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437C634F1DBF4B20001178CE /* Stubs.swift */; };
 		438839821DBFA960007A8EBB /* Yasa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437C634D1DBF4B03001178CE /* Yasa.swift */; };
 		43A1CF501DBF84C100D89110 /* Clienting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A1CF4F1DBF84C100D89110 /* Clienting.swift */; };
@@ -44,7 +44,7 @@
 		437C63451DBF4ADA001178CE /* EntityMapping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntityMapping.swift; sourceTree = "<group>"; };
 		437C63461DBF4ADA001178CE /* ServiceConfiguring.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceConfiguring.swift; sourceTree = "<group>"; };
 		437C63491DBF4AE4001178CE /* LoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
-		437C634A1DBF4AE4001178CE /* MenuService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuService.swift; sourceTree = "<group>"; };
+		437C634A1DBF4AE4001178CE /* ItemService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemService.swift; sourceTree = "<group>"; };
 		437C634D1DBF4B03001178CE /* Yasa.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Yasa.swift; sourceTree = "<group>"; };
 		437C634F1DBF4B20001178CE /* Stubs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stubs.swift; sourceTree = "<group>"; };
 		43A1CF4F1DBF84C100D89110 /* Clienting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Clienting.swift; sourceTree = "<group>"; };
@@ -151,7 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				437C63491DBF4AE4001178CE /* LoginService.swift */,
-				437C634A1DBF4AE4001178CE /* MenuService.swift */,
+				437C634A1DBF4AE4001178CE /* ItemService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -174,6 +174,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 437C63361DBF49F1001178CE /* Build configuration list for PBXNativeTarget "Yasa" */;
 			buildPhases = (
+				43B012711DC29AD300A009C8 /* ShellScript */,
 				437C631D1DBF49F1001178CE /* Sources */,
 				437C631E1DBF49F1001178CE /* Frameworks */,
 				437C631F1DBF49F1001178CE /* Headers */,
@@ -262,6 +263,22 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		43B012711DC29AD300A009C8 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint autocorrect\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		437C631D1DBF49F1001178CE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -271,7 +288,7 @@
 				438839821DBFA960007A8EBB /* Yasa.swift in Sources */,
 				437C63471DBF4ADA001178CE /* EntityMapping.swift in Sources */,
 				43A1CF501DBF84C100D89110 /* Clienting.swift in Sources */,
-				437C634C1DBF4AE4001178CE /* MenuService.swift in Sources */,
+				437C634C1DBF4AE4001178CE /* ItemService.swift in Sources */,
 				437C634B1DBF4AE4001178CE /* LoginService.swift in Sources */,
 				437C63421DBF4ABC001178CE /* FoundationClient.swift in Sources */,
 				43A1CF521DBF874300D89110 /* AlamoClient.swift in Sources */,
